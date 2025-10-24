@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primera página</title>
+</head>
+<body>
+    <!--Este es el título de mi página-->
+    <h1>Pepinillos Manolo</h1>
+    <h2>Pepinillos</h2>
+
+    <h2>Manolo</h2>
+    <a href="https://www.google.com/?hl=es" target="_blank">Click para ir a google</a>
+    <img src="Pepino.jpg" width="200" height="200" alt="Foto de un pepino...">
+
+    <p>Hola que ase</p>
+    <p>Hola que ase</p>
+    <h2>Tipos de pepino</h2>
+    <ul>
+       <li><a href="https://www.google.com/?hl=es"></a> Pepino albino</li>
+       <li>Pepino moreno</li>
+       <li>Pepino rubio</li> 
+    </ul>
+    <h2>LISTA DE PEDIDOS</h2>
+    <table border="1">
+       <thead>
+        <tr>
+            <th>Nº PEDIDO</th>
+            <th>FECHA</th>
+            <th>IMPORTE</th>
+            <th>VER</th>
+            <th colspan="2">ACCION</th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+            <td>#1234</td>
+            <td>12/12/2025</td>
+            <td>225€</td>
+            <td>clic</td>
+            <td>borrar</td>
+            <td>borrar</td>
+        </tr>
+       </tbody>
+       <tfoot>
+        <tr>
+            <td colspan="6">Total pedidos</td>
+        </tr>
+       </tfoot>
+     
+    </table>
+    <form id="contact-form">
+        <fieldset>
+        <legend>Datos básicos</legend>
+
+
+        <label>Nombre:
+        <input type="text"  
+        placeholder="Escribe aquí tu nombre" required>
+        </label>
+        <p></p>
+        <label>Edad:
+        <input type="number" min="2" max="10" step="0.1"
+        placeholder="Ecribe aquí tu edad">
+        </label>
+        <p></p>
+        <label>Fecha nacimiento:
+        <input type="date" placeholder="Escribe aquí tu edad">
+        </label>
+        <p></p>
+         <label>Email:
+        <input type="date" placeholder="Escribe aquí tu email">
+        </label>
+        <p></p>
+         <label>Teléfono:
+        <input type="Tel:" placeholder="Escribe aquí tu teléfono">
+        </label>
+        <p></p>
+         <label>Email:
+        <input type="date" placeholder="Escribe aquí tu email">
+        </label>
+        <p></p>
+         <label>Contraseña:
+        <input type="password" minlength="8"   placeholder="Escribe aquí tu contraseña">
+        </label>
+        <p></p>
+        </fieldset>
+        <fieldset>
+            <legend>Fechas, hora y número</legend>
+             <label>Hora de inicio:
+                <input type="time"  step="60">
+        </label>
+        <p></p>
+         <label>Cita:
+                <input type="datetime-local">
+        </label>
+        <p></p>
+         <label>Mes:
+                <input type="month">
+        </label>
+        <p></p>
+         <label>Semana:
+                <input type="week">
+        </label>
+        <p></p>
+         <label>Prioridad:
+                <input type="range" min="0" max="100" value="50" oninput="document.getElementById('valorRango').value=this.value">
+        </label>
+        <output id="valorRango">50</output>
+        <p></p>
+        <label>Color favorito:
+                <input type="color" value="#555555">
+        </label>
+        <p></p>
+        </fieldset>
+        <>
+            <legend>Opciones y listas</legend>
+            <fieldset>
+            <input type="radio" name="tipo_pepino" value="moreno" checked>
+            <label>Moreno</label>
+             <input type="radio" name="tipo_pepino" value="kirby">
+            <label>Kirby</label>
+              <input type="radio" name="tipo_pepino" value="rubio">
+            <label>Rubio</label>
+            
+            </fieldset>
+            <fieldset>
+                <legend>Extras</legend>
+                <input type="checkbox" name="extras" value="ketchup">
+                <label>Ketchup</label>
+                <p></p>
+                <input type="checkbox" name="extras" value="costilleta">
+                <label>Costilleta</label>
+                <p></p>
+                <input type="checkbox" name="extras" value="nocilla">
+                <label>Nocilla</label>
+                <p></p>
+            </fieldset>
+            <label>Variedad</label>
+            <select id="s-variedad" name="s-variedad">
+                <option value="SinOpcion">-------------</option>
+                <optgroup label="Clásicos">
+                <option value="Holandes">Holandés</option>
+                <option value="Español">Español</option>
+                </optgroup>
+                <optgroup label="Modernos">
+                <option value="Frances">Frances</option>
+                </optgroup>
+            </select>
+            <p></p>
+            <label>Lotes(puedes elegir varios)</label>
+            <select id="Lotes" name="lotes[]" multiple size="4">
+                <option value="LOTE1">LOTE1</option>
+                <option value="LOTE2">LOTE2</option>
+                <option value="LOTE3">LOTE3</option>
+                <option value="LOTE4">LOTE4</option>
+                <option value="LOTE5">LOTE5</option>
+                <option value="LOTE6">LOTE6</option>
+                
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Texto y archivos</legend>
+             <label>Obervaciones</label>
+             <textarea rwos="10" cols="40" placeholder="Escribe aquí tus sugerencias"></textarea> 
+             <label>Adjuntar factura: </label>
+
+             <input type="file" accept=".pdf" multiple>
+             <label>Cargando fichero</label>
+
+             <progress value="70" max="100"></progress>
+             
+
+        </fieldset>
+
+        <button type="submit">Enviar</button>
+
+    </form>
+</body>
+</html>
